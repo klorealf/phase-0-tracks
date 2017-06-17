@@ -8,7 +8,6 @@
     position:absolute;
     top:0; bottom:0; left:0;
     width: 20%;
-
 }
 
 
@@ -16,10 +15,6 @@
     width:80%; height:50px;
     padding-left: 155px;
     text-align: center;
-
-
-
-
 }
 
 blockquote {
@@ -42,21 +37,14 @@ cite {
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
 but it's optional! */
-}
 
-@media screen and (max-width: 959px) and (min-width: 300
-  px) {
-.container (max-width: 100%) mg {
-  width:100%;
-}
 
 #sidebar {
-  width: 20%;
+  width: 20%; !important
 }
 
 #main {
   width:80%;
-}
 }
 
 figure {
@@ -73,9 +61,13 @@ body {
   max-width: 960px;
 }
 
-
-/*@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
   body {
     background-color: hotpink;
+    font-size: 0.5em;}
+  html { font-size: 90.5%; }
+  h1 { font-size: 1.0em; }
+
+
   }
 }
