@@ -1,20 +1,29 @@
-.container { position:relative; padding:0 0 0 55px;
+
+.container {
+  position:relative;
+  padding:0 0 0 55px;
   display: inline-block;
   vertical-align: text-top;
   margin: 0 auto;
+  width: 100%;
 }
 
 #sidebar {
     position:absolute;
     top:0; bottom:0; left:0;
     width: 20%;
+
 }
 
-
 #content {
-    width:80%; height:50px;
+    position: absolute;
+    width:100%; height:50px;
     padding-left: 155px;
-    text-align: center;
+    text-align: left;
+}
+
+img {
+  width: 100%;
 }
 
 blockquote {
@@ -37,19 +46,57 @@ cite {
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like,
 but it's optional! */
+}
 
+@media screen and (max-width: 959px) and (min-width: 300
+  px) {
+.container (max-width: 100%) mg {
+  width:100%;
+}
 
 #sidebar {
-  width: 20%; !important
+  width: 20%;
 }
 
-#main {
+#content {
   width:80%;
 }
+
+img {
+  width:100%;
+}
+}
+
+@media screen and (max-width: 640px) {
+
+.container {
+  position:static;
+  padding:0
+  margin: auto;
+  width: 100%;
+}
+
+#sidebar {
+  width: 100%;
+  position: static;
+  padding-left: 0;
+  margin:auto;
+}
+
+#content {
+  width:100%;
+  position: static;
+  padding-left: 0;
+  margin:auto;
+
+}
+}
+
 
 figure {
   margin-left: 0px;
   margin-right: 0px;
+  width: 100%;
 }
 
 figcaption {
@@ -61,13 +108,13 @@ body {
   max-width: 960px;
 }
 
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 500px) {
   body {
-    background-color: hotpink;
-    font-size: 0.5em;}
-  html { font-size: 90.5%; }
-  h1 { font-size: 1.0em; }
-
-
+   font-size: 0.5em;}
+ html { font-size: 90.5%; }
+ h1 { font-size: 1.0em; }
   }
 }
+
+
