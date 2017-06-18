@@ -1,1 +1,39 @@
-body {background:blue}
+.container { 
+  font-size: 2em;
+  position:relative;  
+  display: inline-block;
+  vertical-align: text-top;
+  margin: 0 auto;
+}
+
+a:visited {
+    color: green;
+}
+
+#paragragh1 {
+  color: red;
+  font-weight: bold;	
+  border-style: solid;
+  font-family: Helvetica;
+  border-top-width: 15px;
+  border-color: #696969;  
+  padding: 40px;
+  background-image:url(dog_bone.png);
+  background-color: #cccccc;
+}
+
+h1 {
+  display: block;
+  margin-top: 10px;
+  z-index:1
+}
+
+h3 {
+  text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+  body {
+    
+    font-size: 0.5em;}
+}
