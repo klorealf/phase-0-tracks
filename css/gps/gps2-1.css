@@ -1,0 +1,24 @@
+.column-1 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 30%;
+  background-color: pink;
+  margin-left: 5%;
+  padding-left: 5%;
+  border: solid;
+  border-width: thin;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  color: purple;
+}
+.column-2 {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 30%;
+  background-color: purple;
+  margin-left: 5%;
+  padding-left: 5%;
+  border: solid;
+  border-width: thin;
+  font-family: ‘Palatino Linotype’, ‘Book Antiqua’, Palatino, serif;
+  color: pink;
+}
