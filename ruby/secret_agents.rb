@@ -1,3 +1,4 @@
+puts "What's the password?"
 p "password".next
 
 index = 0
