@@ -1,9 +1,10 @@
 p "How many employees will be processed?"
-number_employees = gets.chomp
+number_employees = gets.chomp.to_i
 
 loop_counter = 0
 
 loop do 
+p "Employee number: #{loop_counter+1}"
 p "What is your name?"
 	name = gets.chomp
 
@@ -65,6 +66,21 @@ end
  	p "Definitely a vampire!"
   else
   p "Results inconclusive"
+  break
  end
  loop_counter += 1
 end
+
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
