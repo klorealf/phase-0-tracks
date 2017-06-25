@@ -47,7 +47,7 @@ end
   	p "Probably a vampire"
   elsif  !age_right && (!vampire_like_garlic && !vampire_want_insurance)
  	p "Almost certainly a vampire."
- elsif age_right && vampire_like_garlic && vampire_want_insurance
+ elsif age_right && vampire_like_garlic && vampire_want_insurance && vampire_name
  	p "Definitely a vampire!"
   else
   	p "Results inconclusive"
