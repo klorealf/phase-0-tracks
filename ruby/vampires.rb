@@ -1,5 +1,6 @@
 p "What is your name?"
 	name = gets.chomp
+
 if name = "Drake Cula" || "Tu Fang"
 	vampire_name = true
  else
@@ -40,12 +41,15 @@ else
 end
 
 
- if age_right && (vampire_like_garlic || vampire_want_insurance)
+ if age_right && vampire_like_garlic || vampire_want_insurance
  	p "Probably not a vampire."
   elsif !age_right && (!vampire_like_garlic || vampire_want_insurance)
   	p "Probably a vampire"
-  elsif  
+  elsif  !age_right && (!vampire_like_garlic && !vampire_want_insurance)
  	p "Almost certainly a vampire."
+ elsif age_right && vampire_like_garlic && vampire_want_insurance
+ 	p "Definitely a vampire!"
   else
+  	p "Results inconclusive"
  end
 
