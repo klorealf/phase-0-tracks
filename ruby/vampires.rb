@@ -28,18 +28,18 @@ end
 p "Would you like to enroll in the company's health insurance? (Yes/No)"
 insurance = gets.chomp.downcase
 
-if insurance = "yes"
+if insurance == "yes"
   vampire_want_insurance = true
- else 
+else
   vampire_want_insurance = false
 end
 
 
  if age_right && (vampire_like_garlic || vampire_want_insurance)
  	p "Probably not a vampire."
-  elsif age_right && (vampire_like_garlic || vampire_want_insurance)
+  elsif !age_right && (!vampire_like_garlic || vampire_want_insurance)
   	p "Probably a vampire"
-  elsif  age_right && (vampire_like_garlic && vampire_want_insurance)
+  elsif  
  	p "Almost certainly a vampire."
   else
  end
