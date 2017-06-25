@@ -1,3 +1,8 @@
+p "How many employees will be processed?"
+
+loop_counter = 0
+
+loop do 
 p "What is your name?"
 	name = gets.chomp
 
@@ -22,7 +27,7 @@ if age <= 150 && year >= 1867
  elsif year < 1867
 	age_right = false
 	else
-	  p nil 
+	  p "nil"
 end 
 
 
@@ -34,7 +39,7 @@ if garlic == "yes".downcase
  elsif garlic == "no".downcase
   vampire_like_garlic = false
  else
-  p nil  
+  p "nil"  
 end
 
 p "Would you like to enroll in the company's health insurance? (Yes/No)"
@@ -45,20 +50,20 @@ if insurance == "yes".downcase
  elsif insurance == "no".downcase
   vampire_want_insurance = false
  else
-  p nil
+  puts nil
 end
 
 
- if age_right && (vampire_like_garlic || vampire_want_insurance) 
+ if age_right && vampire_like_garlic || vampire_want_insurance 
  	p "Probably not a vampire."
-  elsif !age_right && (!vampire_like_garlic || vampire_want_insurance) 
-  p "Probably a vampire"
-  elsif !(age_right && vampire_like_garlic && vampire_want_insurance)
+  elsif !age_right && !vampire_like_garlic || !vampire_want_insurance 
+  p "Probably a vampire."
+  elsif !age_right && !(vampire_like_garlic && vampire_want_insurance)
  	p "Almost certainly a vampire."
-  elsif  (vampire_name) && age_right && vampire_like_garlic && vampire_want_insurance 
+  elsif age_right && vampire_like_garlic && vampire_want_insurance && (vampire_name) 
  	p "Definitely a vampire!"
   else
   p "Results inconclusive"
  end
-
-
+ loop_counter += 1
+end
