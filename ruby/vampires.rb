@@ -1,5 +1,10 @@
 p "What is your name?"
 	name = gets.chomp
+if name = "Drake Cula" || "Tu Fang"
+	vampire_name = true
+ else
+ 	vampire_name = false
+end
 
 p "How old are you?"
 	age = gets.chomp.to_i
