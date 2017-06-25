@@ -1,5 +1,5 @@
 p "What is your name?"
-
+	name = gets.chomp
 
 p "How old are you?"
 	age = gets.chomp.to_i
@@ -7,14 +7,40 @@ p "How old are you?"
 p "What year were you born?"
 	year = gets.chomp.to_i
 
- if age <= 150 && year >= 1867
-		p "You are not a vampire."
+if age <= 150 && year >= 1867
+	age_right = true
  elsif age > 150
-		p "You are a vampire!"
+	age_right = false
  else year < 1867
-		p "You are a vampire!"
+	age_right = false
+end 
+
+
+p "Our company cafeteria serves garlic bread. Should we order some for you? (Yes/No)"
+garlic = gets.chomp.downcase 
+
+if garlic == "yes"
+  vampire_like_garlic = true
+ else
+  vampire_like_garlic = false
+end
+
+p "Would you like to enroll in the company's health insurance? (Yes/No)"
+insurance = gets.chomp.downcase
+
+if insurance = "yes"
+  vampire_want_insurance = true
+ else 
+  vampire_want_insurance = false
+end
+
+
+ if age_right && (vampire_like_garlic || vampire_want_insurance)
+ 	p "Probably not a vampire."
+  elsif age_right && (vampire_like_garlic || vampire_want_insurance)
+  	p "Probably a vampire"
+  elsif  age_right && (vampire_like_garlic && vampire_want_insurance)
+ 	p "Almost certainly a vampire."
+  else
  end
 
-puts "Our company cafeteria serves garlic bread. Should we order some for you?"
-
-puts "Would you like to enroll in the company's health insurance?"
