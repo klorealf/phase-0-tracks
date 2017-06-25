@@ -1,4 +1,5 @@
 p "How many employees will be processed?"
+number_employees = gets.chomp
 
 loop_counter = 0
 
