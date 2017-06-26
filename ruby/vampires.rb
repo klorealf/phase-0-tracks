@@ -1,4 +1,4 @@
-p "How many employees will be processed?"
+  p "How many employees will be processed?"
   number_employees = gets.chomp.to_i
 
 loop_counter = 0
@@ -57,18 +57,18 @@ until loop_counter == number_employees
   end
 
 
- if age_right && vampire_like_garlic || vampire_want_insurance 
+  if age_right && vampire_like_garlic || vampire_want_insurance 
  	p "Probably not a vampire."
   elsif !age_right && !vampire_like_garlic || !vampire_want_insurance 
-  p "Probably a vampire."
+    p "Probably a vampire."
   elsif !age_right && !(vampire_like_garlic && vampire_want_insurance)
  	p "Almost certainly a vampire."
   elsif age_right && vampire_like_garlic && vampire_want_insurance && (vampire_name) 
  	p "Definitely a vampire!"
   else
-  p "Results inconclusive"
+    p "Results inconclusive"
   break
- end
+  end
  
 
 loop_allergy_counter = 0
@@ -79,14 +79,14 @@ loop do
    puts "Allergy: #{loop_allergy_counter+1}"
    allergy = gets.chomp.downcase
    puts "Allergy type: #{allergy}"
-   if allergy == "done"
-     puts  "Thank you"
-     break
-     elsif allergy == "sunshine"
-     puts "Probably a vampire."
-     break
-    else
-   end
+  if allergy == "done"
+   p  "Thank you"
+  break
+  elsif allergy == "sunshine"
+   p "Probably a vampire."
+  break
+  else
+  end
  loop_allergy_counter += 1
 end
 
@@ -94,9 +94,7 @@ end
  loop_counter += 1
 end 
 
-
-
- p "Actually nevermind!Let's all be friends."	
+   p "Actually nevermind!Let's all be friends."	
  	
 
  	
