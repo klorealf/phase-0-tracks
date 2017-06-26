@@ -1,9 +1,10 @@
-  p "How many employees will be processed?"
+p "How many employees will be processed?"
   number_employees = gets.chomp.to_i
 
 loop_counter = 0
 
-loop do 
+until loop_counter == number_employees
+  
   p "Employee number: #{loop_counter+1}"
   p "What is your name?"
   	name = gets.chomp
@@ -72,6 +73,8 @@ loop do
 
 loop_allergy_counter = 0
   puts "Do you have any allergies?List one at a time. Type 'done' when finised"
+  
+
 loop do 
    puts "Allergy: #{loop_allergy_counter+1}"
    allergy = gets.chomp.downcase
@@ -86,12 +89,16 @@ loop do
    end
  loop_allergy_counter += 1
 end
- 
+
  
  loop_counter += 1
 end 
+
+
+
+ p "Actually nevermind!Let's all be friends."	
  	
- 	
+
  	
  	
  	
