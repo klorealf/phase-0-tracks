@@ -36,7 +36,7 @@ def fake_name(fullname)
 
 	final_name = ""
 
-	new_name.each do |letter|
+	new_name.map! do |letter|
 		if ('aeiou'.include? letter) #find vowel in the string
 			encrypt = vowel(letter) #use vowel(letter) method
 			final_name << encrypt #add encrypt value to final_name variable
@@ -47,14 +47,14 @@ def fake_name(fullname)
 			final_name << letter #catch all that don't apply
 		end
 	end
-	final_name
+	final_name.capitalize
 end
 
 input = ""
 store_names = {}
 until input == "quit"
 	puts "Please enter a name. Do you want to quit? Type 'quit' to exit"
-	input = gets.chomp
+	input = gets.chomp.downcase
 	if input != 'quit'
 		store_names[input] = fake_name(input)
 	end
