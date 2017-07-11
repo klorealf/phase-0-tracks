@@ -10,7 +10,7 @@ characteristics
 behavior
 	bark
 	pant
-	growl
+	growls
 =end 
 
 class Puppy
