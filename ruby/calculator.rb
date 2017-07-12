@@ -27,4 +27,4 @@ calculate(4, '*', 5)
 calculate(4, '/', 5)
 =end
 
-p interface(5, '*', 2)
+p interface(6, '*', 8)
