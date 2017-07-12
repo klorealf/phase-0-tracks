@@ -27,4 +27,8 @@ calculate(4, '*', 5)
 calculate(4, '/', 5)
 =end
 
+<<<<<<< HEAD
 p interface(6, '*', 8)
+=======
+p interface(5, '*', 5)
+>>>>>>> 4320f06749df599773c6090d68fda8c440f53aaa
