@@ -1,6 +1,6 @@
 class Santa
 
-	def speak(str)
+	def speak
 		p "Ho, Ho Ho! Happy Holidays!"
 	end
 
@@ -13,3 +13,7 @@ class Santa
 	end
 
 end
+
+santa= Santa.new
+santa.speak
+santa.eat_milk_and_cookies("chocolate")
