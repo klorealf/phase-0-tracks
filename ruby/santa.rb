@@ -1,6 +1,6 @@
 class Santa
 
-attr_reader :gender
+	attr_reader :gender
 	attr_accessor :ethnicity, :age
 
 	def initialize(gender, ethnicity)
@@ -11,7 +11,7 @@ attr_reader :gender
 		@age = rand(140)
 
 	end
-	
+
 	def speak
 		p "Ho, Ho Ho! Happy Holidays!"
 	end
@@ -19,28 +19,28 @@ attr_reader :gender
 	def eat_milk_and_cookies(type)
 		p "That was a good #{type} cookie!"
 	end
-  
-  def celebrate_birthday(age) 
-    @age = age.to_i + 1
-  end
-  
-  def get_mad_at(name)
-    @reindeer.push(name) 
-    @reindeer.delete(name) 
-  end
-  
-  def gender=(new_gender)
-    @gender = new_gender
-  end
-  
-  def age
-    @age 
-  end
-  
-  def ethnicity
-    @ethnicity
-  end
-end
+
+	def celebrate_birthday(age) 
+		@age = age.to_i + 1
+	end
+
+	def get_mad_at(name)
+		@reindeer.push(name) 
+		@reindeer.delete(name) 
+	end
+
+	def gender=(new_gender)
+		@gender = new_gender
+	end
+
+	def age
+		@age 
+	end
+
+	def ethnicity
+		@ethnicity
+	end
+	end
 
 santas = []
 genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
