@@ -29,17 +29,19 @@ class Santa
 		@reindeer.delete(name) 
 	end
 
-	def gender=(new_gender)
+=begin
+	def gender=(new_gender) #don't need setter anymore b/c of accessor
 		@gender = new_gender
 	end
 
-	def age
+	def age #don't need gender setter anymore b/c of reader
 		@age 
 	end
 
-	def ethnicity
+	def ethnicity #don't need getter anymore b/c of reader
 		@ethnicity
 	end
+=end 
 	end
 
 santas = []
