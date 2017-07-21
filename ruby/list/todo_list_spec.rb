@@ -23,3 +23,10 @@ describe TodoList do
   end
 end
 
+p "#{calc_history.keys.length} calculations performed:"
+
+calc_history.each do |calculation, answer|
+  puts "#{{calculation}: {answer}}"
+end
+
+
