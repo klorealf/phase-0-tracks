@@ -1,7 +1,7 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Joe].
+# We spent [#] hours on this challenge. 1
 
 # EXPLANATION OF require_relative
 #
@@ -19,6 +19,7 @@ class VirusPredictor
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
+    death_rate(@population_density, @population, @state)
   end
 
   private
