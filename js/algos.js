@@ -38,6 +38,9 @@ function matches(obj1, obj2){
 	}
 	return false;
 }
-
+//test to make sure matches are strictly key-value pairs not just keys or values.
+console.log(matches({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
+console.log(matches({name: "Steven", year: 90}, {name: "Tamir", age: 54}));
+console.log(matches({name: "Steven", year: 54}, {name: "Tamir", age: 54})
 
 
