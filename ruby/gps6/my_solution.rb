@@ -17,8 +17,8 @@ class VirusPredictor
   end
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+#    predicted_deaths(@population_density, @population, @state)
+#   speed_of_spread(@population_density, @state)
     death_rate(@population_density, @population, @state)
   end
 
@@ -44,7 +44,7 @@ class VirusPredictor
       speed += 2.5 
     end
 
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+    print "#{@state} will lose #{number_of_deaths} people in this outbreak and will spread across the state in #{speed} months."
 
   end
 
@@ -89,6 +89,9 @@ california.virus_effects
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
 
+STATE_DATA.each do |state|
+  VirusPredictor.new(state[0], state[1] [:population_density], state[1] [:population]).virus_effects
+end
 
 #=======================================================================
 # Reflection Section
