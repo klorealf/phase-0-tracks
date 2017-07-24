@@ -29,6 +29,15 @@ within the function iterate through one of the object params keys to see if it s
 If it does, return true.
 If it doesn't share any keys with the second object return false.
 */
+function matches(obj1, obj2){
+
+	for(var key in obj1){
+		if(obj1[key] == obj2[key]){
+			return true;
+		}
+	}
+	return false;
+}
 
 
 
