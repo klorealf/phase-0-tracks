@@ -44,3 +44,13 @@ console.log(matches({name: "Steven", year: 90}, {name: "Tamir", age: 54}));
 console.log(matches({name: "Steven", year: 54}, {name: "Tamir", age: 54})
 
 
+/*declare a function makeArray with param integer
+The integer should be the number of items in an array the function creates
+define a string of possible characters
+Iterate the amount of times of the integer input
+within that loop declare an empty string
+within the loop add another four loop that adds 1-10 random characters to string
+push each created string to empty array
+return array outside of loops
+console log test
+*/
