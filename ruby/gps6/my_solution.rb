@@ -24,18 +24,24 @@ class VirusPredictor
 
   private
 
-  def predicted_deaths(population_density, population, state)
+  def death_rate(population_density, population, state)
     # predicted deaths is solely based on population density
+    speed = 0.0
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
+     speed += 0.5 
     elsif @population_density >= 150
       number_of_deaths = (@population * 0.3).floor
+      speed += 1
     elsif @population_density >= 100
       number_of_deaths = (@population * 0.2).floor
+      speed += 1.5 
     elsif @population_density >= 50
       number_of_deaths = (@population * 0.1).floor
+      speed += 2 
     else
       number_of_deaths = (@population * 0.05).floor
+      speed += 2.5 
     end
 
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
