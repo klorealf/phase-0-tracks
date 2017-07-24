@@ -1,10 +1,10 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: Joe ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Joe].
+# We spent [#] hours on this challenge. 1
 
 # EXPLANATION OF require_relative
-#Uses a local path connected to a current file. Require uses path from outside of the directory. 
+#
 #
 require_relative 'state_data'
 
@@ -15,14 +15,15 @@ class VirusPredictor
     @population = population
     @population_density = population_density
   end
-#aggregates some data. This is a wrapper method. Call this and runs the others.
+
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
+    death_rate(@population_density, @population, @state)
   end
 
   private
-#shows the effect of the virus depending on population per state
+
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -40,7 +41,7 @@ class VirusPredictor
     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
-#speed the virus spreads is based on the population density and time in months
+
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -69,7 +70,7 @@ end
 # DRIVER CODE
  # initialize VirusPredictor for each state
 
-=begin
+
 alabama = VirusPredictor.new("Alabama", STATE_DATA["Alabama"][:population_density], STATE_DATA["Alabama"][:population])
 alabama.virus_effects
 
@@ -81,15 +82,7 @@ california.virus_effects
 
 alaska = VirusPredictor.new("Alaska", STATE_DATA["Alaska"][:population_density], STATE_DATA["Alaska"][:population])
 alaska.virus_effects
-=end 
 
-STATE_DATA.each do |state, density|
-  VirusPredictor.new(state, STATE_DATA[state][:population_density], STATE_DATA [state][:population])virus_effects
-  
-p state
-p density
-puts
-end
 
 #=======================================================================
 # Reflection Section
