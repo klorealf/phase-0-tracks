@@ -1,0 +1,4 @@
+1. JOINING THREE TABLES TOGETHER :
+	Command: SELECT * FROM users, reviews, businesses WHERE users.id = reviews.user_id AND businesses.id  = reviews.user_id;
+	Output: 1| Bradford|Pitt|1|5|Great food!|1|1|1|Grundy Hollow Wedding Chapel
+	            2|Mandy| Kaling|2|3|OK food!|2|2|2|Amir's Towing
