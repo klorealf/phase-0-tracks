@@ -1,84 +1,61 @@
-#RELEASE 0
+# def greetings
+#   puts "this is within the method"
+#   yield
+# end
 
-def drinks
-  drink1 = "pina colada"
-  drink2 = "cosmo"
-  puts "What is your favorite cocktail?"
-  yield(drink1, drink2)
-end
-
-drinks{|drink1, drink2| puts "#{drink1} is delicious on vacation! #{drink2} is so Sex and the City!"}
-
-#RELEASE 1
-
-cocktails = [
-  "pina colada",
-  "cosmo",
-  "beer",
-  "wine",
-  "vodka"
-]
-p cocktails
+# greetings {puts "this is outside the method"}
+# -Array- .each .map!
+# -hash - .each
+#Release 1
+favorite_food=["pizza","tacos","cookies","ice cream","sushi"]
 
 states = {
-  Illinois: "Springfield",
-  New_York: "Albany",
-  Michigan: "Lansing",
-  New_Jersey: "Trenton",
-  California: "Sacramento"
-}
+        New_Jersey:"Trenton",
+        New_York:"Albany",
+        Connecticut:"Hartford",
+        Pennsylvania:"Harrisburg",
+        Delaware:"Dover"
+      }
+
+# favorite_food.each  {|x| puts "My favorite food is #{x}."}
+
+# states.each do  |state,capital|
+#   puts "#{capital} is the capital of #{state}"
+#   end
+# sorted_food=[]
+# favorite_food.map! do |x|
+#   puts x
+#   x.upcase!
+#   end
+
+# p favorite_food
+
+#RELEASE 2
+# 1______________________________________________________________________
+puts "RELEASE 2.1\n"
+states.delete_if {|state,capital| state==:Connecticut }
 p states
 
-cocktails.each {|x| puts " My favorite drink is #{x}!"}
 
-cocktails.map! do |x|
-  x.upcase
-end
-p cocktails
-
-states.each do |state, capitol|
-  puts " I love visiting #{capitol}, #{state}!"
-end
-
-
-# RELEASE 2
-
-cocktails.delete_if {|drinks| drinks == "PINA COLADA"}
-p cocktails
-
-states.delete_if {|state, capitol| state == :California}
+favorite_food.delete_if {|food| food=="cookies"}
+p favorite_food
+#2_______________________________________________________________________
+puts "RELEASE 2.2\n"
+states.keep_if{|state,capital| state==:New_York}
 p states
-
-cocktails.select {|drink| drink == "COSMO"}
-p cocktails
-
-states.keep_if {|state, capitol| state == :Michigan}
-p states
-
-cocktails.each {|drink|
-if drink.include? ("O")
-puts cocktails
-end
-}
-
-states.each {|state, capitol|
-if state.length <= 8
-puts state
-end
-}
-
-cocktails.each do |drink|
-  if drink.include?("P")
-    break
-  else
-    p cocktails
-  end
-end
-
-states.each {|state, capitol|
-if state.length > capitol.length
-  break
-else
-  p state
+favorite_food.select!{|food|food=="sushi"}
+p favorite_food
+#3_______________________________________________________________________
+puts "RELEASE 2.3\n"
+states.each {|state,capital|
+  if state.length <= 10
+    puts state
   end
 }
+#4_______________________________________________________________________
+puts "RELEASE 2.4\n"
+favorite_food.each {|food|
+      if food.include?("a")
+        print food + " "
+  end
+   }
