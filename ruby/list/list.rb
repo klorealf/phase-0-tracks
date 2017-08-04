@@ -1,27 +1,28 @@
 class TodoList
-	attr_accessor :item
-
-	def initialize
-		@item = item
-		@list = ["do the dishes", "mow the lawn"]
-	end
-
-	def add_item(item)
-		@list << item 
-	end
-
-	def delete_item(item)
-	  @list.delete("do the dishes")
-	end
-	
-	def retrieve_item(index)
-	  @list[index]
-	end
+    attr_accessor :list
+    def initialize(arr)
+        @list = arr
+    end
+    def get_items
+        @list
+    end
+    def add_item(item)
+        list << item
+        list
+    end
+    def delete_item(item)
+        @delete_item=list.delete(item)
+        #list
+    end
+    def get_item(id)
+        @get_item=list[id]
+    end
 end
 
-=begin
-todo = TodoList.new
-todo.add_item("mop") 
-todo.delete_item("do the dishes")
-todo.retrieve_item(0)
-=end
+list = TodoList.new(["do the dishes", "mow the lawn"])
+p list.get_items
+p list.add_item("mop")
+p list.get_items
+p list.delete_item("do the dishes")
+p list.get_items
+p list.get_item(0)
