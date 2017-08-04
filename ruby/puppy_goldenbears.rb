@@ -13,7 +13,7 @@ behavior
 	growls
 =end 
 
-class Puppy
+class Puppy 
 end 
 
 duchess = Puppy.new
@@ -27,7 +27,7 @@ spot.class
 duchess == fido
 fido.instance_of?(Array)
 fido.instance_of?(Puppy)
-spot.play_dead
+#spot.play_dead
 
 str = String.new
 str.length 
