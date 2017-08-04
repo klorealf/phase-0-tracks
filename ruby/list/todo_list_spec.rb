@@ -1,6 +1,6 @@
-describe TodoList do
+ require_relative 'list'
 
-  require_relative 'list'
+describe TodoList do
 
   let(:list) { TodoList.new(["do the dishes", "mow the lawn"]) }
 
@@ -23,10 +23,6 @@ describe TodoList do
   end
 end
 
-p "#{calc_history.keys.length} calculations performed:"
 
-calc_history.each do |calculation, answer|
-  puts "#{{calculation}: {answer}}"
-end
 
 
