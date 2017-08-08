@@ -95,3 +95,23 @@ STATE_DATA.each do |state, data|
 end 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+
+# The string/hash rocket notation is nice when you'll be interpolating the keys into strings or you have multi-word keys, like North Dakota. Using symbols for keys is arguably easier to read and faster, but doesn't work well for multi-word keys.
+
+# What does require_relative do? How is it different from require?
+
+# Require_relative looks for the other file relative to the location that it is being called from. This is useful for any files that will have the same file structure later. Require needs a complete path, and is useful when you are requiring files from outside sources, such as the internet.
+
+# What are some ways to iterate through a hash?
+
+# Hash iterators include iterating through each key, value, or key value pair. These determine which values will be passed in to the block parameters.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+
+# Making instance variables significantly reduces the number of parameters required.
+
+# What concept did you most solidify in this challenge?
+
+# I think private methods make more sense now, though I don't feel like I'd always have a good sense of when to make a method private and when to make it public.
