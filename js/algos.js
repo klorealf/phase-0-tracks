@@ -7,6 +7,7 @@ repeat until all words have been checked
  return the temporary longest
 */
 
+
 function findLongest(ary){
 	var length = 0;
 	
@@ -40,7 +41,7 @@ function matches(obj1, obj2){
 }
 //test to make sure matches are strictly key-value pairs not just keys or values.
 console.log(matches({name: "Steven", age: 54}, {name: "Tamir", age: 54}));
-console.log(matches({name: "Steven", year: 90}, {name: "Tamir", age: 54}));
+console.log(matches({name: "Steven", year: 95}, {name: "Tamir", age: 54}));
 console.log(matches({name: "Steven", year: 54}, {name: "Tamir", age: 54})
 
 
