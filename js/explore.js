@@ -10,3 +10,12 @@ function reverse(string) {
   for(let i = string.length - 1; i >= 0; i--) {
     newString += string[i];
 }
+
+return newString;
+}
+
+const reversedString = reverse('This string is reversed');
+
+if(1 + 1 === 2) {
+  console.log(reversedString);
+}
