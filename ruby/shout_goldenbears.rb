@@ -1,6 +1,6 @@
 # module Shout
 #   # we'll put some methods here soon, but this code is fine for now!
-#end 
+# end 
 
 # 	def self.yell_angrily(words)
 # 		words + "!!!" + " :("
@@ -13,6 +13,9 @@
 
 # p Shout.yell_angrily("Go away")
 # p Shout.yell_happily("I love you")
+#require_relative 'shout'
+
+#Shout.singleton_methods
 
 
 
