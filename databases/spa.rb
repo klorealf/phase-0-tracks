@@ -23,4 +23,6 @@ create_services_table = <<-SQL
  		cost INT
 	)
 
-	
+@db.execute(create_customers_table)
+@db.execute(create_services_table)
+
