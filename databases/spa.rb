@@ -78,3 +78,15 @@ def user_interface
 		end
 
 	end
+
+def service1
+	puts "Please enter your full name:"
+	name = gets.chomp
+	puts "Please enter your age:"
+	age = gets.chomp
+	puts "Please enter the service you are interested in:"
+	service = gets.chomp
+
+
+	@db.execute("INSERT INTO customers (customer_name, acustomer_age, service_wanted) VALUES (?, ?, ?)" , [name, age, service])
+end
