@@ -12,6 +12,18 @@ get '/' do
   "#{params[:name]} is #{params[:age]} years old."
 end
 
+get '/contact' do
+  "http://www.icecream.com/"
+end
+
+get '/great_job:person' do
+  person = params[:person]
+  if name
+  "#Good job,{person}!"
+ else
+  "Good job!"
+end
+
 # write a GET route with
 # route parameters
 get '/about/:person' do
