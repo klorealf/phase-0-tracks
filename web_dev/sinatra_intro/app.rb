@@ -69,9 +69,9 @@ get '/students_named/:name' do
   response = ''
   students = db.execute('SELECT * FROM students WHERE name=?', params[:name])
   students.each do |student|
-    response << "Did you mean #{student['name']}, the "
-    response << "#{student['age']} year old on the "
-    response << "#{student['campus']} campus?"
+    response << "Do you know #{student['name']}?"
+    response << "The age of the student is #{student['age']} years old and "
+    response << "lives #{student['campus']} campus?"
   end
   response
 end
