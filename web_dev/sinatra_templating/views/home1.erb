@@ -1,0 +1,18 @@
+<!-- <!DOCTYPE html> -->
+<html>
+<head>
+  <title>Campus Student Roster</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h1>Campus Student Roster</h1>
+  <p>List of Students by Campus</p>
+  <p><%= @students %></p>
+  <p>Click <a href="/students/campus">here</a>to see a list of students by campus.</p>
+  <ul>
+    <% @students.each do |student| %>
+      <li><%= student['name'] %> : <%= student['campus'] %></li>
+    <% end %>
+  </ul>
+</body>
+</html>
