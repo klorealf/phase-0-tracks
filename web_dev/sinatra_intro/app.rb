@@ -49,7 +49,7 @@ get '/contact' do
   "1234 Lollipop Ln, NY,NY 01234"
 end
 
-get '/great_job/' do
+get '/great_job/:name' do
   name = params[:name]
   if name
   "Good job #{name}!"
