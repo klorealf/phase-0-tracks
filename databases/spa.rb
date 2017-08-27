@@ -1,5 +1,5 @@
 require 'sqlite3'
-require 'faker'
+#require 'faker'
 
 #create SQLite3 database
 
@@ -17,17 +17,18 @@ create_customers_table = <<-SQL
 SQL
 
 create_services_table = <<-SQL
-	CREATE TABLE IF NOT EXISTS servies (
+	CREATE TABLE IF NOT EXISTS services (
  		id INTEGER PRIMARY KEY,
  		service_available VARCHAR (255),
  		cost INT
 	)
 
+SQL
 @db.execute(create_customers_table)
 @db.execute(create_services_table)
 
 def user_interface
-	closing = "Enjoy your stay!"
+	closing = "Enjoy your day!"
 	puts "Welcome to the Spa!"
 	puts "What type of service will you be needing?"
 	puts "Type 1 for facial" 
@@ -45,13 +46,13 @@ def user_interface
 				puts "Type 3 for a facial mask"
 				puts "Type 4 to Quit"	
 				facial_type = gets.chomp
-					if facial_type == "1"
-						service1
-					elsif facial_type == "2"
-						service2
-					elsif facial_type == "3"
-						service3
-					elsif facial_type == "4"
+					if facial_type == 1
+						add_customers
+					elsif facial_type == 2
+						add_customers
+					elsif facial_type == 3
+						add_customers
+					elsif facial_type == 4
 						puts closing
 						break
 					end
@@ -65,9 +66,15 @@ def user_interface
 			nail_type = gets.chomp
 				if nail_type == "1"
 					puts ""
-					puts "These are the color polishes we have:"
-					service1
-					service2
+					puts "We have lots of polish options!"
+					add_customers
+					add_services
+					puts closing
+				elsif nail_type == "2"
+					puts ""
+					puts "We have lots of gel options!"
+					add_customers
+					add_services
 					puts closing
 				else
 					puts closing
@@ -99,3 +106,23 @@ def add_services
 
 	@db.execute("INSERT INTO services (service_available, cost) VALUES (?, ?, ?)" , [service, cost])
 end
+
+def list_of_customers
+	customers = @db.execute("SELECT * FROM customers;")
+	puts "--- List of Customers ---"
+	for i in 0...(customers.length) do
+		puts "Name: #{customers[i]["customer_name"]} Age: #{customers[i]["customer_age"]} Service wanted: #{customers[i]["service_wanted"]}"
+	end
+end
+
+def list_of_services
+	stuff_available = @db.execute("SELECT * FROM services;")
+	puts "--- Services available---"
+	for i in 0...(stuff_available.length) do
+		puts "Service: #{stuff_available[i]["service_available"]} Cost: $#{stuff_available[i]["cost"]}"
+	end
+end
+
+user_interface
+
+ customers = @db.execute("SELECT * FROM customers")
